@@ -54,16 +54,19 @@
                 <button name="1.2.3" class="btn btn-secondary btn-block" data-sql="SELECT * FROM employees WHERE gender = 'F' LIMIT 100;" onClick="reply_click(this)">1.2.3</button>
                 <button name="1.2.4" class="btn btn-secondary btn-block" data-sql="SELECT * FROM employees WHERE last_name = 'Simmel' AND hire_date &lt '1986-01-01' LIMIT 100;" onClick="reply_click(this)">1.2.4</button>
                 <button name="1.2.5" class="btn btn-secondary btn-block" data-sql="SELECT count(emp_id) as &quot;Total with B&quot; FROM employees WHERE last_name LIKE 'B%' LIMIT 100;" onClick="reply_click(this)">1.2.5</button>
-                <button name="1.2.6" class="btn btn-secondary btn-block" data-sql="CREATE TABLE `employees`.`emp_training` (`trainer_no` INT NOT NULL AUTO_INCREMENT, `first_name` VARCHAR(30) NOT NULL, `last_name` VARCHAR(30) NOT NULL, `t_module` VARCHAR(20) NULL, PRIMARY KEY (`trainer_no`));" onClick="reply_click(this)">1.2.6</button>
-                <button name="1.2.7" class="btn btn-secondary btn-block" data-sql="INSERT INTO `employees`.`emp_training`(`first_name`, `last_name`, `t_module`) VALUES ('Joe', 'Bloggs', 'Google Docs'); INSERT INTO `employees`.`emp_training`(`first_name`, `last_name`, `t_module`) VALUES ('Fred', 'Bloggs', 'Google Sheets');" onClick="reply_click(this)">1.2.7</button>
-                <button name="1.2.8" class="btn btn-secondary btn-block" data-sql="DROP TABLE `employees`.`emp_training`;" onClick="reply_click(this)">1.2.8</button>
-                <button name="1.2.9" class="btn btn-secondary btn-block" data-sql="ALTER TABLE `employees`.`employees` ADD COLUMN `email_address` VARCHAR(20) NULL AFTER `hire_date`;" onClick="reply_click(this)">1.2.9</button>
+                <button name="1.2.6" class="btn btn-secondary btn-block" data-sql="CREATE TABLE emp_training (trainer_no integer AUTO_INCREMENTAL, first_name VARCHAR(30) NOT NULL, last_name VARCHAR(30) NOT NULL, t_module VARCHAR(20) NULL, PRIMARY KEY (trainer_no));" onClick="reply_click(this)">1.2.6</button>
+                <button name="1.2.7" class="btn btn-secondary btn-block" data-sql="INSERT INTO emp_training VALUES (00001,'Joe', 'Bloggs', 'Google Docs'); INSERT INTO emp_training VALUES (00002,'Fred', 'Bloggs', 'Google Sheets'); SELECT * FROM emp_training" onClick="reply_click(this)">1.2.7</button>
+                <button name="1.2.8" class="btn btn-secondary btn-block" data-sql="DROP TABLE emp_training;" onClick="reply_click(this)">1.2.8</button>
+                <button name="1.2.9" class="btn btn-secondary btn-block" data-sql="ALTER TABLE employees ADD COLUMN email_address VARCHAR(20) NULL AFTER hire_date;" onClick="reply_click(this)">1.2.9</button>
                 <button name="1.2.10" class="btn btn-secondary btn-block" data-sql="UPDATE employees SET email_address = 'gfacello@gmail.com' WHERE emp_no = 10001;" onClick="reply_click(this)">1.2.10</button>
 
             </div>
             <div class="col-lg-10 order-2">
                 <textarea id="commands" class="col-lg-8 order-2 mb-5">
-The queries will be showned here!
+First, upload the .db file
+Then, press one of the left buttons
+
+                    The queries will be showned here!
 
                 </textarea>
                 <div class="d-grid gap-2 mt-2">
