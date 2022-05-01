@@ -57,16 +57,16 @@
                 <button name="1.2.6" class="btn btn-secondary btn-block" data-sql="CREATE TABLE emp_training (trainer_no integer AUTO_INCREMENTAL, first_name VARCHAR(30) NOT NULL, last_name VARCHAR(30) NOT NULL, t_module VARCHAR(20) NULL, PRIMARY KEY (trainer_no));" onClick="reply_click(this)">1.2.6</button>
                 <button name="1.2.7" class="btn btn-secondary btn-block" data-sql="INSERT INTO emp_training VALUES (00001,'Joe', 'Bloggs', 'Google Docs'); INSERT INTO emp_training VALUES (00002,'Fred', 'Bloggs', 'Google Sheets'); SELECT * FROM emp_training" onClick="reply_click(this)">1.2.7</button>
                 <button name="1.2.8" class="btn btn-secondary btn-block" data-sql="DROP TABLE emp_training;" onClick="reply_click(this)">1.2.8</button>
-                <button name="1.2.9" class="btn btn-secondary btn-block" data-sql="ALTER TABLE employees ADD COLUMN email_address VARCHAR(20) NULL AFTER hire_date;" onClick="reply_click(this)">1.2.9</button>
-                <button name="1.2.10" class="btn btn-secondary btn-block" data-sql="UPDATE employees SET email_address = 'gfacello@gmail.com' WHERE emp_no = 10001;" onClick="reply_click(this)">1.2.10</button>
+                <button name="1.2.9" class="btn btn-secondary btn-block" data-sql="ALTER TABLE employees ADD COLUMN email_address VARCHAR(20) NULL;" onClick="reply_click(this)">1.2.9</button>
+                <button name="1.2.10" class="btn btn-secondary btn-block" data-sql="UPDATE employees SET email_address = 'gfacello@gmail.com' WHERE emp_id = 10001; SELECT * FROM employees WHERE emp_id = 10001;" onClick="reply_click(this)">1.2.10</button>
 
             </div>
             <div class="col-lg-10 order-2">
                 <textarea id="commands" class="col-lg-8 order-2 mb-5">
-First, upload the .db file
+First, upload the employees.db file
 Then, press one of the left buttons
 
-                    The queries will be showned here!
+The queries will be displayed here!
 
                 </textarea>
                 <div class="d-grid gap-2 mt-2">
